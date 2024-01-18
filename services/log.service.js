@@ -22,13 +22,15 @@ export const printHelp = () => {
 
 export const printWeather = (res, icon) => {
   console.log(
-    dedent`${chalk.bgYellow(" WEATHER ")} Погода у місті ${res.name}
+    dedent(`${chalk.bgYellow(" WEATHER ")} Погода у місті ${res.name}
     ${icon}  ${res.weather[0].description}
     Температура: ${res.main.temp}°C відчувається як ${res.main.feels_like}°C
     Мінімальна температура: ${res.main.temp_min}°C
     Максимальна температура: ${res.main.temp_max}°C
     Вологість повітря: ${res.main.humidity}%
     Швидкість вітру: ${res.wind.speed} м/с
-    `
+    
+    ${chalk.bgCyanBright("product by Muzalov Serhii")}
+    `)
   );
 };
